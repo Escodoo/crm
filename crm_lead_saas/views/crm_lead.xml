@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="crm_lead_form_view">
+        <field name="name">crm.lead.form (in crm_lead_saas)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <page name="lead" position="before">
+                <page name="crm_saas_values" string="Saas Values">
+                    <group name="crm_lead_saas_values" string="Saas Values">
+                        <field name="amount_mrr"/>
+                        <field name="amount_arr"/>
+                        <field name="amount_nrr"/>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+
+<!--    <record model="ir.ui.view" id="crm_lead_search_view">-->
+<!--        <field name="name">crm.lead.search (in crm_lead_saas)</field>-->
+<!--        <field name="model">crm.lead</field>-->
+<!--        <field name="inherit_id" ref="TODO othermodule.search_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            &lt;!&ndash; TODO &ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    <record model="ir.ui.view" id="crm_lead_tree_view">-->
+<!--        <field name="name">crm.lead.tree (in crm_lead_saas)</field>-->
+<!--        <field name="model">crm.lead</field>-->
+<!--        <field name="inherit_id" ref="TODO othermodule.tree_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            &lt;!&ndash; TODO &ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>
